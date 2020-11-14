@@ -1,0 +1,24 @@
+{% extends "pochta_main/base.html" %}
+{% block title %}
+УПС! Заглушка!
+{% endblock %}
+{% load static %}
+{% block content %}
+<section class="Main banner" style="background: #d8ecff; padding-top: 30px; margin-top: 0; padding-bottom: 30px;">
+    <div class="" data-swiper-slide-index="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12">
+                    <div class="banner_img" style="text-align: center;">
+                        <img src="{% static 'img/pass.png' %}" width="300" height="300" alt="Отправляй данные дома">
+                    </div>
+                </div>
+                <div class="col-md-8 col-12" style="padding-top: 60px;">
+                    <h1 style="margin-bottom: 25px;">УПС! Заглушка!</h1>
+                    <p style="margin-right: 150px;">Кажется вы нашли нашу заглушку, но мы обязательно приведем сюда функционал.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

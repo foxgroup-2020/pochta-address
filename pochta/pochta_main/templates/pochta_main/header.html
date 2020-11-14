@@ -1,0 +1,44 @@
+<div class="header-container">
+    <div>
+        <div class="header"><a id="profile-header-logo" class="header__logo" href="/"></a>
+            <div class="header__menu">
+                <a id="profile-header-support-btn" href="https://pochta.ru/support"
+                   class="header__btn-all-services">Помощь</a>
+                {% if user.is_authenticated %}
+                <span class="mr-5">
+                    {{ user.get_full_name }}
+                </span>
+                <span class="profile-header-menu-btn">
+                        <div class="text-button header__btn-user-menu">
+                            <a href="{% url 'logout' %}"
+                               class="b-hamburger-menu__item b-hamburger-menu__item--help">Выйти</a>
+                        </div>
+                </span>
+                {% else %}
+                <span class="profile-header-menu-btn">
+                        <div class="text-button header__btn-user-menu">
+                            <a href="{% url 'login' %}"
+                               class="b-hamburger-menu__item b-hamburger-menu__item--help">Войти</a>
+                        </div>
+                {% endif %}
+            </div>
+            <div id="profile-header-mobile-menu-btn" class="header__mobile-menu-btn">
+                <div class="header__mobile-menu-btn-icon"></div>
+            </div>
+        </div>
+        <div class="mobile-menu-wrapper">
+            <div class="mobile-menu">
+                <div class="mobile-menu__section">
+                    <div class="mobile-menu__section-title mobile-menu__section-title--user">Женин М. А.</div>
+                    <a
+                            href="https://pochta.ru/tracking" class="mobile-menu__section-button">Мои отправления</a><a
+                        href="https://passport.pochta.ru/pm/auth/logout?redirect_uri=https%3A%2F%2Fpochta.ru"
+                        class="mobile-menu__section-button">Выйти</a>
+                </div>
+                <div class="mobile-menu__section">
+                    <a href="https://pochta.ru/" class="mobile-menu__section-button">Назад</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

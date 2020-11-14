@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import ProfileForm, LoginForm
+from .forms import LoginForm
 from django.contrib import auth
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
 
-class index(View):
+class Index(View):
     template_name = 'pochta_main/index.html'
     context = {
         'title': 'Главная страница',
@@ -17,29 +18,7 @@ class index(View):
         return render(request, self.template_name, context=self.context)
 
 
-class profile(View):
-    template_name = 'pochta_main/profile.html'
-    message = ''
-    context = {
-        'message': '',
-        'form': ProfileForm(),
-    }
-
-    @method_decorator(login_required(login_url='login'))
-    def get(self, request, *args, **kwargs):
-        return render(request, self.template_name, context=self.context)
-
-    @method_decorator(login_required(login_url='login'))
-    def post(self, request, *args, **kwargs):
-        form = ProfileForm(request.POST)
-        if form.is_valid():
-            form.save()
-        else:
-            self.context['message'] = 'Ошибка формы'
-        return render(request, self.template_name, context=self.context)
-
-
-class login(View):
+class Login(View):
     template_name = 'pochta_main/login.html'
     message = ''
     context = {
@@ -61,4 +40,21 @@ class login(View):
                 self.context['message'] = 'Ошибка авторизации'
         else:
             self.context['message'] = 'Ошибка формы'
+        return render(request, self.template_name, context=self.context)
+
+
+class Logout(View):
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return redirect('index')
+
+
+class Pass(View):
+    template_name = 'pochta_main/pass.html'
+    message = ''
+    context = {
+        'message': '',
+    }
+
+    def get(self, request, *args, **kwargs):
         return render(request, self.template_name, context=self.context)

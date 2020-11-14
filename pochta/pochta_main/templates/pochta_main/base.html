@@ -1,5 +1,31 @@
-{% block title %}
-{% endblock %}
-{% include "pochta_main/menu.html" %}
+{% load static %}
+<html class="aui rpst-portal" dir="ltr" lang="ru-RU">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--[if lt IE 8]> <meta http-equiv="refresh" content="0; url=/unsupportedBrowser"> <![endif]-->
+    <link href="https://www.pochta.ru/" rel="canonical">
+    <link rel="apple-touch-icon" href="https://www.pochta.ru/portal-v2-theme/assets/src/images/logo-smart-banner.7dc53251f66b41caf5146c9c54fb0bc4.png">
+    <link rel="android-touch-icon" href="https://www.pochta.ru/portal-v2-theme/assets/src/images/logo-smart-banner.7dc53251f66b41caf5146c9c54fb0bc4.png">
+    <link rel="icon" href="https://www.pochta.ru/portal-v2-theme/favicon.ico">
+
+    <link rel="icon" href="https://passport.pochta.ru/pm/resources/1.23.0/style/img/favicon.ico" type="image/x-icon">
+
+    <link href="https://passport.pochta.ru/pm/resources/1.23.0/style/style.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://www.pochta.ru/digital-remote-services/css/app.css" rel="stylesheet">
+
+    <link href="https://zakaznoe.pochta.ru/landing/static/css/app.css?ver=d5c4136746bb21a32438" rel="stylesheet">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% include "pochta_main/header.html" %}
 {% block content %}
 {% endblock %}
+{% include "pochta_main/footer.html" %}
+</body>
+</html>
+

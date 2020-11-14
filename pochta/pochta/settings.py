@@ -25,7 +25,12 @@ SECRET_KEY = 'srd%p4e(ab43@o$66a!51w$$0^cmn$jct0gl_rn%ep8%-rlirl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '192.168.50.50',
+    '83.174.239.25',
+    '7232060bc89f.sn.mynetname.net',
+]
 
 
 # Application definition
@@ -105,7 +110,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "pochta_main.Organisation"
 LOGIN_REDIRECT_URL = '/profile/home'
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
