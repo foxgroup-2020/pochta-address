@@ -23,4 +23,8 @@ urlpatterns = [
     path('login/', Login.as_view(), name='login'),
     path('logout/', Logout.as_view(), name='logout'),
     path('pass/', Pass.as_view(), name='pass'),
+    path('download/', Upload.as_view(), name='upload'),
+    path('files/', Files.as_view(), name='files'),
+    path('files/<int:pk>', Files_Detail.as_view(), name='files_detail'),
+    path('billing/', BillingView.as_view(), name='billing'),
 ]

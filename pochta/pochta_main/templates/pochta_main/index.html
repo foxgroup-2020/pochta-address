@@ -1,51 +1,47 @@
 {% extends "pochta_main/base.html" %}
-{% block title %}Главная страница{% endblock %}
 {% load static %}
 {% block content %}
 <section class="Main banner" style="background: #d8ecff; padding-top: 30px; margin-top: 0; padding-bottom: 30px;">
-    <div class="" data-swiper-slide-index="0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-12">
-                    <div class="banner_img" style="text-align: center;">
-                        <img src="{% static 'img/girl.png' %}" width="300" height="300" alt="Отправляй данные дома">
+        <div class="" data-swiper-slide-index="0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div class="banner_img" style="text-align: center;">
+                            <img src="{% static 'img/girl.png' %}" width="300" height="300" alt="Отправляй данные дома">
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-8 col-12" style="padding-top: 60px;">
-                    <h1 style="margin-bottom: 25px;">Отправляй данные дома</h1>
-                    <p style="margin-right: 150px;">Используй наш сервис и не бойся за корректность
-                        данных. Мы сделаем все за вас!</p>
-                    <div id="profile-save-btn" class="button user-profile-page__save-btn"
-                         style="margin: 0;background: #0055a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAIAAAD9HKYrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpcTskNACAIq2zswK7SKgEi+iC9aACYyyAY4EMDGVw6qNSNl+8oXo7UvjNOn83Tx4cyT/3kdZ/xV3S2AAMAzVY9Uy9CZKMAAAAASUVORK5CYII=); color: white;">
-                        <span>Отправить</span>
+                    <div class="col-md-8 col-12" style="padding-top: 60px;">
+                        <h1 style="margin-bottom: 25px;">Отправляй данные дома</h1>
+                        <p>Используй наш сервис и не бойся за корректность
+                            данных. Мы сделаем все за вас!</p>
+                        <a href="{% url 'pass' %}"<div id="profile-save-btn" class="button user-profile-page__save-btn" style="margin: 0;background: #0055a6 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAIAAAD9HKYrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpcTskNACAIq2zswK7SKgEi+iC9aACYyyAY4EMDGVw6qNSNl+8oXo7UvjNOn83Tx4cyT/3kdZ/xV3S2AAMAzVY9Uy9CZKMAAAAASUVORK5CYII=); color: white;" ><span>Отправить</span>
+                    </div></a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="main__questions" style="padding-bottom: 0;">
-    <div>
-        <div style="padding-top: 50px; padding-bottom: 20px; text-align: center;position: relative;">
-            <img src="{% static 'img/slide2.png' %}" width="250" height="250"
-                 style="z-index: 0;left: 40px;position: relative;">
-            <img src="{% static 'img/slide1.png' %}" width="250" height="250" style="z-index: 5;position: relative;">
-            <img src="{% static 'img/slide3.png' %}" width="250" height="250"
-                 style="z-index: 0;position: relative;left: -40px;">
-        </div>
-        <div class="slider-card__clone">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="swiper-container slider-card--clone swiper-container-fade swiper-container-initialized swiper-container-horizontal">
-                            <div class="swiper-wrapper">
-                                <div class="slide text-center swiper-slide swiper-slide-active"
-                                     style="padding-bottom: 100px;">
-                                    <h3 class="text-lg font-light color-accent slide__title">
-                                        Это быстро
-                                    </h3>
-                                    <div class="slide__description">
-                                        <p>Обработка данных занимает считанные секунды</p>
+    </section>
+    <section class="main__questions" style="padding-bottom: 0;">
+        <div>
+            <div style="padding-top: 50px; padding-bottom: 20px; text-align: center;position: relative;">
+                <img src="{% static 'img/slide2.png' %}" width="250" height="250" style="z-index: 0;left: 40px;position: relative;">
+                <img src="{% static 'img/slide1.png' %}" width="250" height="250" style="z-index: 5;position: relative;">
+                <img src="{% static 'img/slide3.png' %}" width="250" height="250" style="z-index: 0;position: relative;left: -40px;">
+            </div>
+            <div class="slider-card__clone">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="swiper-container slider-card--clone swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+                                <div class="swiper-wrapper">
+                                    <div class="slide text-center swiper-slide swiper-slide-active"
+                                        style="padding-bottom: 100px;">
+                                        <h3 class="text-lg font-light color-accent slide__title">
+                                            Это быстро
+                                        </h3>
+                                        <div class="slide__description">
+                                            <p>Обработка данных занимает считанные секунды</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -54,69 +50,68 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="all-service">
-    <div class="container pa-3">
-        <div class="all-service__cards">
-            <ul>
-                <li>
-                    <div class="main__cards">
-                        <div class="cards">
-                            <div class="front" style="padding-top: 80px;">
-                                <img src="{% static 'img/lock.png' %}"
-                                     alt="Письма онлайн">
-                                <h3>Безопасность</h3>
-                            </div>
-                            <div class="back">
-                                <div class="back__info">
-                                    <p style="padding-top: 80px;">
-                                        Мы заботимся о вашей безопасности.
-                                    </p>
+    </section>
+    <section class="all-service">
+        <div class="container pa-3">
+            <div class="all-service__cards">
+                <ul>
+                    <li>
+                        <div class="main__cards">
+                            <div class="cards">
+                                <div class="front" style="padding-top: 80px;">
+                                    <img src="{% static 'img/lock.png' %}"
+                                        alt="Письма онлайн">
+                                    <h3>Безопасность</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="back__info">
+                                        <p style="padding-top: 80px;">
+                                            Мы заботимся о вашей безопасности.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="main__cards">
-                        <div class="cards">
-                            <div class="front" style="padding-top: 80px;">
-                                <img src="{% static 'img/folder.png' %}"
-                                     alt="Оплата онлайн">
-                                <h3>Результат</h3>
-                            </div>
-                            <div class="back">
-                                <div class="back__info">
-                                    <p style="padding-top: 80px;">
-                                        Результат не заставит вас ждать.
-                                    </p>
+                    </li>
+                    <li>
+                        <div class="main__cards">
+                            <div class="cards">
+                                <div class="front" style="padding-top: 80px;">
+                                    <img src="{% static 'img/folder.png' %}"
+                                        alt="Оплата онлайн">
+                                    <h3>Результат</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="back__info">
+                                        <p style="padding-top: 80px;">
+                                            Результат не заставит вас ждать.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="main__cards">
-                        <div class="cards">
-                            <div class="front" style="padding-top: 80px;">
-                                <img src="{% static 'img/list.png' %}"
-                                     alt="Онлайн подписка">
-                                <h3>Загрузка данных</h3>
-                            </div>
-                            <div class="back">
-                                <div class="back__info">
-                                    <p style="padding-top: 80px;">
-                                        Загрузка данных в формате xlsx, csv.
-                                    </p>
+                    </li>
+                    <li>
+                        <div class="main__cards">
+                            <div class="cards">
+                                <div class="front" style="padding-top: 80px;">
+                                    <img src="{% static 'img/list.png' %}"
+                                        alt="Онлайн подписка">
+                                    <h3>Загрузка данных</h3>
+                                </div>
+                                <div class="back">
+                                    <div class="back__info">
+                                        <p style="padding-top: 80px;">
+                                            Загрузка данных в формате xlsx, csv.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 {% endblock %}

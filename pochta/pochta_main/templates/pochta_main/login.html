@@ -1,13 +1,28 @@
 {% extends "pochta_main/base.html" %}
-{% block title %}
-Вход
-{% endblock %}
 {% block content %}
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.username }}<br>
-        {{ form.password }}<br>
-        <input type="submit" value="Войти">
-        <span>{{ message }}</span>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4 justify-content-center " style="background-color:white; margin:50px; box-shadow: 0 0 5px rgba(0,0,0,0.5);">
+        <div class="row justify-content-center" style="margin:50px;">
+            <h1>Вход</h1>
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+        <div class="row justify-content-center" style="margin:50px;">
+            {{ form.username }}
+        </div>
+        <div class="row justify-content-center" style="margin:50px;">
+            {{ form.password }}
+        </div>
+        <div class="row justify-content-center" style="margin:50px;">
+            <input class="m-3" type="submit" value="Войти" style="padding:10px;">
+        </div>
+         <div class="row m-3 justify-content-center">
+            <span style='font-color:red;'>{{ message }}</span>
+        </div>
+
     </form>
+    </div>
+    <div class="col-4"></div>
+</div>
 {% endblock %}

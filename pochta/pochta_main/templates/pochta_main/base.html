@@ -17,9 +17,26 @@
 
     <link href="https://zakaznoe.pochta.ru/landing/static/css/app.css?ver=d5c4136746bb21a32438" rel="stylesheet">
     <title>
-        {% block title %}
-        {% endblock %}
+        {{ title }}
     </title>
+    <style>
+        @media (max-width: 1030px) {
+            .col-md-8{
+                text-align: center;
+            }
+            .col-md-8 p {
+                margin-right: 0;
+            }
+        }
+        @media (min-width: 1030px) {
+            .col-md-8 p {
+                margin-right: 150px;
+            }
+            html.rpst-portal.aui .header {
+                width: 1150px;
+            }
+        }
+    </style>
 </head>
 <body>
 {% include "pochta_main/header.html" %}

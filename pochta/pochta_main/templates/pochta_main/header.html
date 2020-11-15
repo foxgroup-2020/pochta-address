@@ -4,10 +4,10 @@
             <div class="header__menu">
                 <a id="profile-header-support-btn" href="https://pochta.ru/support"
                    class="header__btn-all-services">Помощь</a>
-                {% if user.is_authenticated %}
-                <span class="mr-5">
+                 {% if user.is_authenticated %}
+                <a href="{% url 'upload' %}"<span class="mr-5">
                     {{ user.get_full_name }}
-                </span>
+            </span></a>
                 <span class="profile-header-menu-btn">
                         <div class="text-button header__btn-user-menu">
                             <a href="{% url 'logout' %}"
