@@ -92,16 +92,17 @@ def save_to_db(nn_addr, n_addr, state, file_id):
     return 0
 
 if __name__ == "__main__":
-    file_list = get_file_path()
-    for file in file_list:
-        print('Начата обработка файла {}'.format(file[0]))
-        num_rows = save_info_file(file[0])
-        for row_num, row in get_not_normal_address(file[0]):
-            # save_current_record(file[0], row_num)
-            print('Отправляется запрос по адресу: {}'.format(row))
-            ans = send_api_request(row)
-            outaddr = ans.get('addr').get("outaddr")
-            state = ans.get('state')
-            inaddr = ans.get('addr').get('inaddr')
-            print('Сохраняется ответ в базу данных')
-            save_to_db(inaddr, outaddr, state, file[1])
+    while True:
+        file_list = get_file_path()
+        for file in file_list:
+            print('Начата обработка файла {}'.format(file[0]))
+            num_rows = save_info_file(file[0])
+            for row_num, row in get_not_normal_address(file[0]):
+                # save_current_record(file[0], row_num)
+                print('Отправляется запрос по адресу: {}'.format(row))
+                ans = send_api_request(row)
+                outaddr = ans.get('addr').get("outaddr")
+                state = ans.get('state')
+                inaddr = ans.get('addr').get('inaddr')
+                print('Сохраняется ответ в базу данных')
+                save_to_db(inaddr, outaddr, state, file[1])
